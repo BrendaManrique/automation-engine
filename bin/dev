@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+(async () => {
+    const oclif = require('@oclif/core')
+
+    await import('tsx')
+
+    process.env.NODE_ENV = 'development'
+
+    oclif.settings.debug = true;
+
+    oclif.run().then(oclif.flush).catch(oclif.Errors.handle)
+})()
