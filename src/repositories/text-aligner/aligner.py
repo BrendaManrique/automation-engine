@@ -9,7 +9,7 @@ import json
 from tqdm import tqdm
 import wave
 
-HF_MODEL = "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese"
+HF_MODEL = "jonatasgrosman/wav2vec2-large-xlsr-53-english"
 DEFAULT_SAMPLE_RATE = 16000
 device = "cuda" if torch.cuda.is_available() else "cpu"
 

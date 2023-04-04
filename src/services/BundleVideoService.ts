@@ -9,7 +9,7 @@ export default class BundleVideoService {
         log(`Bundling video`, 'BundleVideoService');
         const bundled = await bundle(
             require.resolve(
-                path.resolve(await getPath('remotion'), 'src', 'index.js'),
+                path.resolve(await getPath('remotion'), 'src', 'index.tsx'),
             ),
         );
 

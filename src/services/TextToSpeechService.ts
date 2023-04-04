@@ -1,3 +1,5 @@
+//Supported voices
+//https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=stt#prebuilt-neural-voices
 import {
     SpeechSynthesisOutputFormat,
     SpeechConfig,
@@ -14,21 +16,21 @@ import Segment from '../models/Segments';
 
 class TextToSpeechService {
     private voices = [
-        { chance: 3, name: 'pt-BR-FranciscaNeural' },
-        { chance: 3, name: 'pt-BR-AntonioNeural' },
-        { chance: 1, name: 'pt-BR-BrendaNeural' },
-        { chance: 1, name: 'pt-BR-DonatoNeural' },
-        { chance: 1, name: 'pt-BR-ElzaNeural' },
-        { chance: 1, name: 'pt-BR-FabioNeural' },
-        { chance: 3, name: 'pt-BR-GiovannaNeural' },
-        { chance: 3, name: 'pt-BR-HumbertoNeural' },
-        { chance: 1, name: 'pt-BR-JulioNeural' },
-        { chance: 3, name: 'pt-BR-LeilaNeural' },
-        { chance: 0, name: 'pt-BR-LeticiaNeural' },
-        { chance: 0, name: 'pt-BR-ManuelaNeural' },
-        { chance: 1, name: 'pt-BR-NicolauNeural' },
-        { chance: 1, name: 'pt-BR-ValerioNeural' },
-        { chance: 1, name: 'pt-BR-YaraNeural' },
+        { chance: 3, name: 'en-US-AmberNeural' },
+        { chance: 3, name: 'en-US-AnaNeural' },
+        { chance: 1, name: 'en-US-AriaNeural' },
+        { chance: 1, name: 'en-US-BrandonNeural' },
+        { chance: 1, name: 'en-US-ChristopherNeural' },
+        { chance: 1, name: 'en-US-CoraNeural' },
+        { chance: 3, name: 'en-US-DavisNeural' },
+        { chance: 3, name: 'en-US-ElizabethNeural' },
+        { chance: 1, name: 'en-US-GuyNeural' },
+        { chance: 3, name: 'en-US-JacobNeural' },
+        { chance: 0, name: 'en-US-JasonNeural' },
+        { chance: 0, name: 'en-US-MichelleNeural' },
+        { chance: 1, name: 'en-US-MonicaNeural' },
+        { chance: 1, name: 'en-US-SaraNeural' },
+        { chance: 1, name: 'en-US-TonyNeural' },
     ];
     private azureKey: string;
     private azureRegion: string;
@@ -191,7 +193,7 @@ class TextToSpeechService {
             const audioConfig = AudioConfig.fromAudioFileOutput(audioFilePath);
 
             const ssml = `
-                <speak version="1.0" xml:lang="pt-BR">
+                <speak version="1.0" xml:lang="en-US">
                     <voice name="${this.getVoice()}">
                         <break time="250ms" /> ${text}
                     </voice>
