@@ -1,7 +1,5 @@
 import { Config } from 'remotion';
 
-Config.setCodec('h264');
-Config.setImageSequence(false);
-Config.setImageFormat('jpeg');
-Config.setConcurrency(8);
-Config.setPixelFormat("yuv444p");
+Config.Output.setCodec('h264');
+Config.Output.setImageSequence(false);
+Config.Rendering.setImageFormat('jpeg');
