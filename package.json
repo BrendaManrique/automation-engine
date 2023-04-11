@@ -1,15 +1,15 @@
 {
-    "name": "podcast-maker",
+    "name": "automation-engine",
     "version": "2.5.5",
     "description": "Podcast Maker CLI",
-    "author": "Felippe Chemello @FelippeChemello",
+    "author": "Brenda Manrique",
     "bin": {
-        "podcast-maker": "./bin/run"
+        "automation-engine": "./bin/run"
     },
-    "homepage": "https://github.com/FelippeChemello/podcast-maker",
+    "homepage": "https://github.com/BrendaManrique/automation-engine",
     "license": "MIT",
     "main": "dist/src/index.js",
-    "repository": "FelippeChemello/podcast-maker",
+    "repository": "BrendaManrique/automation-engine",
     "files": [
         "/bin",
         "/dist",
@@ -93,8 +93,8 @@
         "typescript": "^4.1.3"
     },
     "oclif": {
-        "bin": "podcast-maker",
-        "dirname": "podcast-maker",
+        "bin": "automation-engine",
+        "dirname": "automation-engine",
         "commands": "./dist/src/commands",
         "plugins": [
             "@oclif/plugin-help",
@@ -113,7 +113,7 @@
     "engines": {
         "node": ">=12.0.0"
     },
-    "bugs": "https://github.com/FelippeChemello/podcast-maker/issues",
+    "bugs": "https://github.com/BrendaManrique/automation-engine/issues",
     "keywords": [
         "podcast",
         "video-maker",

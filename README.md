@@ -5,12 +5,12 @@
 <br/>
 
 <p align="center">
-    <a href="https://github.com/FelippeChemello">
+    <a href="https://github.com/BrendaManrique">
         <img alt="Author" src="https://img.shields.io/badge/Author-BrendaManrique-blue?style=for-the-badge&logo=appveyor">
     </a> 
     <br/>
-    <a href="https://www.npmjs.com/package/podcast-maker">
-        <img alt="GitHub Workflow Status" src="https://img.shields.io/npm/v/podcast-maker/latest?label=CLI&style=for-the-badge">
+    <a href="https://www.npmjs.com/package/automation-engine">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/npm/v/automation-engine/latest?label=CLI&style=for-the-badge">
     </a>
 </p>
 
@@ -29,7 +29,7 @@ This project was developed using:
 
 ## ⚙️ Requirements
 
--   You need to install both NodeJS, Yarn, FFMPEG and Full Google Chrome to run this project (To run it on as Server Side, check actions workflow [here](https://github.com/FelippeChemello/podcast-maker/blob/master/.github/workflows/build-video.yml#L215-L223))
+-   You need to install both NodeJS, Yarn, FFMPEG and Full Google Chrome to run this project (To run it on as Server Side, check actions workflow.
 -   Access to YouTube API and/or Account on Instagram
 
 ## 💻 Getting started
@@ -39,7 +39,7 @@ This project was developed using:
 **Clone repository**
 
 ```sh-session
-$ git clone https://github.com/FelippeChemello/podcast-maker.git
+$ git clone https://github.com/BrendaManrique/automation-engine.git
 ```
 
 **Install dependencies**

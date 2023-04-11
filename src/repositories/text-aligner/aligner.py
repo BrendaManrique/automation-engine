@@ -222,6 +222,6 @@ def main(content_file_path: str, audio_dir_path: str):
 
 
 if __name__ == "__main__":
-    main("/home/felippe/Projects/podcast-maker/video/tmp/example.json", "/home/felippe/Projects/podcast-maker/video/tmp")
+    main("/home/bst/Projects/automation-engine/video/tmp/example.json", "/home/bst/Projects/automation-engine/video/tmp")
     
 

@@ -35,9 +35,9 @@ jobs:
               with:
                   node-version: 16
 
-            - name: podcast-maker CLI cache
+            - name: automation-engine CLI cache
               uses: actions/cache@v3
-              id: podcast-maker-cache
+              id: automation-engine-cache
               with:
                   path: |
                       **/node_modules
@@ -46,7 +46,7 @@ jobs:
                   key: cli-${{ hashFiles('**/package.json') }}-${{ hashFiles('**/yarn.lock') }}
 
             - name: Build
-              if: steps.podcast-maker-cache.outputs.cache-hit != 'true'
+              if: steps.automation-engine-cache.outputs.cache-hit != 'true'
               run: |
                   yarn
                   yarn build
@@ -94,9 +94,9 @@ jobs:
             - name: Install FFMPEG
               uses: FedericoCarboni/setup-ffmpeg@v1
 
-            - name: podcast-maker CLI cache
+            - name: automation-engine CLI cache
               uses: actions/cache@v3
-              id: podcast-maker-cache
+              id: automation-engine-cache
               with:
                   path: |
                       **/node_modules
@@ -105,7 +105,7 @@ jobs:
                   key: cli-${{ hashFiles('**/package.json') }}-${{ hashFiles('**/yarn.lock') }}
 
             - name: Build
-              if: steps.podcast-maker-cache.outputs.cache-hit != 'true'
+              if: steps.automation-engine-cache.outputs.cache-hit != 'true'
               run: |
                   yarn
                   yarn build

@@ -135,7 +135,7 @@ export default class YoutubeUploadService {
         }
 
         description += `\n\n📢 Inscreva-se no canal: https://www.youtube.com/@CodeStackMe?sub_confirmation=1 \n`;
-        description += `💻 Me siga no GitHub: https://github.com/FelippeChemello \n`;
+        description += `💻 Me siga no GitHub: https://github.com/Brenda \n`;
 
         return description;
     }

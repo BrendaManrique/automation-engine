@@ -30,9 +30,9 @@ jobs:
               run: |
                   echo "formattedDate=$(date +%d/%m/%Y)"
                   echo "bashDate=$(date +%d-%m-%Y)"
-            - name: podcast-maker CLI cache
+            - name: automation-engine CLI cache
               uses: actions/cache@v3
-              id: podcast-maker-cache
+              id: automation-engine-cache
               with:
                   path: |
                       **/node_modules
@@ -41,11 +41,11 @@ jobs:
                   key: cli-${{ hashFiles('**/package.json') }}-${{ hashFiles('**/yarn.lock') }}
 
             - name: Build
-              if: steps.podcast-maker-cache.outputs.cache-hit != 'true'
+              if: steps.automation-engine-cache.outputs.cache-hit != 'true'
               run: |
                   yarn
                   yarn build
-            - name: Create SymLink from content directory (on code) to content directory (created by podcast-maker CLI)
+            - name: Create SymLink from content directory (on code) to content directory (created by automation-engine CLI)
               run: |
                   ContentPath=$(./bin/run info content --dir)
                   if [ -d "$ContentPath" ]; then 
