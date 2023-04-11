@@ -25,6 +25,7 @@ import clickSound from '../../../assets/click.mp3';
 
 type WrapperProps = {
 	title: string;
+	children: React.ReactNode;
 };
 
 type VideoWrapperProps = {
@@ -201,7 +202,7 @@ export const YoutubeWrapper: React.FC<WrapperProps> = ({children, title}) => {
 			startClickAnimationAtFrame,
 			200 + startScaleAnimationAtFrame,
 			250 + startScaleAnimationAtFrame,
-			durationInFrames,
+			330,//durationInFrames,
 		],
 		[1.57, 1.57, 1, 1, 1.57, 1.57]
 	);
@@ -213,7 +214,7 @@ export const YoutubeWrapper: React.FC<WrapperProps> = ({children, title}) => {
 			startClickAnimationAtFrame,
 			200 + startScaleAnimationAtFrame,
 			250 + startScaleAnimationAtFrame,
-			durationInFrames,
+			330,//durationInFrames,
 		],
 		[16.3, 16.3, 0, 0, 16.3, 16.3]
 	);
@@ -225,7 +226,7 @@ export const YoutubeWrapper: React.FC<WrapperProps> = ({children, title}) => {
 			startClickAnimationAtFrame,
 			200 + startScaleAnimationAtFrame,
 			250 + startScaleAnimationAtFrame,
-			durationInFrames,
+			330,//durationInFrames,
 		],
 		[7.3, 7.3, 0, 0, 7.3, 7.3]
 	);
@@ -449,7 +450,7 @@ export const YoutubeWrapper: React.FC<WrapperProps> = ({children, title}) => {
 					</Footer>
 				</main>
 				<Aside>
-					{new Array(7).fill(0).map((_, i) => {
+					{new Array(3).fill(0).map((_, i) => {
 						return (
 							<div key={i}>
 								<main></main>
