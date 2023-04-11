@@ -16,6 +16,30 @@
         {
             "text": "Test, news article 1.",
             "url": ""
+        },
+        {
+            "text": "Test, news article 2.",
+            "url": ""
+        },
+        {
+            "text": "Test, news article 3.",
+            "url": ""
+        },
+        {
+            "text": "Test, news article 4.",
+            "url": ""
+        },
+        {
+            "text": "Test, news article 5.",
+            "url": ""
+        },
+        {
+            "text": "Test, news article 6.",
+            "url": ""
+        },
+        {
+            "text": "Test, news article 7.",
+            "url": ""
         }
     ]
 }

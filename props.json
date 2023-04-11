@@ -1,0 +1,148 @@
+{"durationInFrames":1474,
+"destination": "youtube" ,
+"content":
+{
+  "title": "Test, this is the title.",
+  "fps": 30,
+  "timestamp": 1680102356,
+  "width": 1920,
+  "height": 1080,
+  "date": "29/03/2023",
+  "intro": {
+    "text": "Test, this is the intro"
+  },
+  "end": {
+    "text": "Test, this is the end.",
+    "url": "https://bit.ly/newsletter-filipe-deschamps"
+  },
+  "news": [
+    {
+      "text": "Test, news article 1.",
+      "url": ""
+    }
+  ],
+  "renderData": [
+    {
+      "text": "Test, this is the intro",
+      "duration": 2.95,
+      "audioFilePath": "/Users/brendamanrique/Library/Caches/@oclif/core/output-intro.mp3",
+      "segments": [
+        {
+          "start": 300,
+          "end": 787.5,
+          "word": "Test"
+        },
+        {
+          "start": 875,
+          "end": 1012.5,
+          "word": ","
+        },
+        {
+          "start": 1012.5,
+          "end": 1250,
+          "word": "this"
+        },
+        {
+          "start": 1262.5,
+          "end": 1412.5,
+          "word": "is"
+        },
+        {
+          "start": 1425,
+          "end": 1537.5,
+          "word": "the"
+        },
+        {
+          "start": 1550,
+          "end": 2137.5,
+          "word": "intro"
+        }
+      ]
+    },
+    {
+      "text": "Test, news article 1.",
+      "duration": 2.9625,
+      "audioFilePath": "/Users/brendamanrique/Library/Caches/@oclif/core/output-0.mp3",
+      "segments": [
+        {
+          "start": 300,
+          "end": 800,
+          "word": "Test"
+        },
+        {
+          "start": 900,
+          "end": 1000,
+          "word": ","
+        },
+        {
+          "start": 1000,
+          "end": 1325,
+          "word": "news"
+        },
+        {
+          "start": 1337.5,
+          "end": 1762.5,
+          "word": "article"
+        },
+        {
+          "start": 1775,
+          "end": 2137.5,
+          "word": "1"
+        },
+        {
+          "start": 2150,
+          "end": 2262.5,
+          "word": "."
+        }
+      ]
+    },
+    {
+      "text": "Test, this is the end.",
+      "duration": 2.8125,
+      "audioFilePath": "/Users/brendamanrique/Library/Caches/@oclif/core/output-end.mp3",
+      "segments": [
+        {
+          "start": 300,
+          "end": 787.5,
+          "word": "Test"
+        },
+        {
+          "start": 875,
+          "end": 1012.5,
+          "word": ","
+        },
+        {
+         "start": 1012.5,
+          "end": 1250,
+          "word": "this"
+        },
+        {
+          "start": 1262.5,
+          "end": 1425,
+          "word": "is"
+        },
+        {
+          "start": 1437.5,
+          "end": 1537.5,
+          "word": "the"
+        },
+        {
+          "start": 1550,
+          "end": 2000,
+          "word": "end"
+        },
+        {
+          "start": 2012.5,
+          "end": 2112.5,
+          "word": "."
+        }
+      ]
+    }
+  ],
+  "youtube": {
+    "viewCount": "0",
+    "subscriberCount": "0",
+    "videoCount": "0"
+  }
+}
+}
