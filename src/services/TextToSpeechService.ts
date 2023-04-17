@@ -75,7 +75,7 @@ class TextToSpeechService {
         if (synthesizeEnd) {
             await this.synthesizeEnd()
         }
-
+        log(`${JSON.stringify(this.content)}`, 'TextToSpeechService');
         return this.content;
     }
 
@@ -176,6 +176,10 @@ class TextToSpeechService {
         return this.voice;
     }
 
+    private getSingleVoice() {
+        return 'en-US-JasonNeural';
+    }
+
     private async synthesize(text: string, sufix: string): Promise<{ audioFilePath: string, duration: number, segments: Segment[] }> {
         const tmpPath = await getPath('tmp');
         const segments: Segment[] = []
@@ -194,8 +198,10 @@ class TextToSpeechService {
 
             const ssml = `
                 <speak version="1.0" xml:lang="en-US">
-                    <voice name="${this.getVoice()}">
-                        <break time="250ms" /> ${text}
+                    <voice name="${this.getSingleVoice()}">
+                        <mstts:express-as style="whispering" styledegree="2">
+                            <break time="250ms" /> ${text}
+                        </mstts:express-as>
                     </voice>
                 </speak>`;
 

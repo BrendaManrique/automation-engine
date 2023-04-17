@@ -20,7 +20,7 @@ const {
  } = getInputProps()
 
 export const RemotionVideo: React.FC = () => {
-    console.log(content)
+    //console.log(content)
     
     if (!content || !content.renderData || !durationInFrames) {
         throw new Error(`Missing information. Content: ${!!content}, renderData: ${!!content.renderData}, durationInFrames: ${!!durationInFrames}`);

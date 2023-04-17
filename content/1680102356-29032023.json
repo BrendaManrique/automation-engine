@@ -1,45 +1,21 @@
 {
-    "title": "Test, this is the title.",
+    "title": "Daily Calm | 10 Minute Mindfulness Meditation | Be Present.",
     "fps": 30,
     "timestamp": 1680102356,
     "width": 0,
     "height": 0,
     "date": "29/03/2023",
     "intro": {
-        "text": "Test, this is the intro"
+        "text": "Welcome to Daily Calm."
     },
     "end": {
-        "text": "Test, this is the end.",
-        "url": "https://bit.ly/newsletter-filipe-deschamps"
+        "text": "As we approach the end of the session, bring your attention back to the room. Wiggle your fingers and toes and slowly open your eyes. I hope you enjoyed today's daily meditation. Bring this state of peace with you into the day and we'll see you back here tomorrow.",
+        "url": "https://bit.ly/newsletter"
     },
     "news": [
         {
-            "text": "Test, news article 1.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 2.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 3.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 4.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 5.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 6.",
-            "url": ""
-        },
-        {
-            "text": "Test, news article 7.",
-            "url": ""
+            "text": "Today is a new day, so let's bring full attention to this very moment. Let's start by finding a comfortable position  with a tall straight back, allow your arms to rest gently and when you're ready, close your eyes.",
+            "url": "https://google.com"
         }
     ]
 }

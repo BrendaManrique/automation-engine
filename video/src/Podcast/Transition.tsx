@@ -5,12 +5,15 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 	Audio,
+	Img,
 	delayRender,
 } from 'remotion';
 import styled from 'styled-components';
 
 import transitionAudioSrc from '../../../assets/transition.mp3';
+import transitionlogo from '../../../assets/transitionlogo.gif';
 import {Arc} from './Arc';
+
 
 const Container = styled.div`
 	flex: 1;
@@ -24,7 +27,7 @@ export const Transition: React.FC<{}> = () => {
 	const springConfig: SpringConfig = {
 		damping: 10,
 		mass: 0.1,
-		stiffness: 100,
+		stiffness: 5,
 		overshootClamping: true,
 	};
 	const scale = spring({
@@ -46,13 +49,13 @@ export const Transition: React.FC<{}> = () => {
 	return (
 		<>
 			<Audio src={transitionAudioSrc} />
-			<Container>
+			{/*<Container>
 				<div
 					style={{
 						transform: `scale(${scale})`,
 					}}
 				>
-					<svg
+					{/*<svg
 						style={{
 							width: videoConfig.width,
 							height: videoConfig.height,
@@ -68,9 +71,17 @@ export const Transition: React.FC<{}> = () => {
 							<mask id="mask">{arcs}</mask>
 						</defs>
 						{arcs}
-					</svg>
+					</svg>*/}
+				{/*	<Img style={{
+							width: videoConfig.height,
+							height: videoConfig.height,
+							position: 'absolute' ,
+							marginLeft: videoConfig.height/2.75,
+							zIndex: 4,
+						}}
+						src={transitionlogo}></Img>
 				</div>
-			</Container>
+			{/*</Container>*/}
 		</>
 	);
 };

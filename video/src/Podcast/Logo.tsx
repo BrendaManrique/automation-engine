@@ -1,3 +1,4 @@
+import { log } from 'console';
 import {
 	continueRender,
 	delayRender,
@@ -6,9 +7,10 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import avatar from '../../../assets/Avatar.png';
+import avatar from '../../../assets/avatar_2.png';
 
 export const Logo: React.FC = () => {
+//export const Logo: React.FC <{hide?: boolean }> = ({ hide=false }) => {
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -26,18 +28,19 @@ export const Logo: React.FC = () => {
 		},
 	});
 
+
 	return (
 		<div
 			style={{
-				marginTop: logoEntry,
+				marginTop: orientation === 'landscape' ? 30 : 50,//logoEntry,
 				marginLeft: orientation === 'landscape' ? 30 : 100,
 				display: 'flex',
 				width: 'fit-content',
 				height: 'fit-content',
 				alignItems: 'center',
-				backgroundColor: '#3F6182',
+				//backgroundColor: '#3F6182',
 				padding: '20px 30px',
-				borderRadius: 10,
+				borderRadius: 10
 			}}
 		>
 			<img
@@ -57,7 +60,7 @@ export const Logo: React.FC = () => {
 					fontSize: 40,
 				}}
 			>
-				CodeStack
+				Equanimy
 			</h1>
 		</div>
 	);

@@ -40,13 +40,13 @@ export const Title: React.FC<{
             animation = interpolate(
                 frame,
                 [startInFrames, secondStep, thirdStep, endInFrames],
-                [0, 1, 1, 0],
+                [0, 0.5, 0.5, 0],
                 {
                     easing: Easing.bezier(0, 0.3, 1, 0.7),
                 }
             )
 
-            console.log(animation)
+            //console.log(animation)
         }
 
         return (
@@ -55,10 +55,10 @@ export const Title: React.FC<{
                     key={word}
                     style={{
                         display: 'inline-block',
-                        fontSize: isTitle ? 65 : 45,
-                        fontWeight: isTitle ? 700 : 300,
-                        background: `rgba(250, 250, 250, ${animation})`,
-                        color: wordShouldAppear ? "#2b2b2b" : "#fafafa",
+                        fontSize: 50, //isTitle ? 65 : 45,
+                        fontWeight:  isTitle ? 700 : 300,
+                        //background: `rgba(250, 250, 250, ${animation})`,
+                        color: wordShouldAppear ? "#3897db" : "#fafafa",
                         borderRadius: 16,
                         padding: `0px 4px`,
                     }}>
@@ -79,6 +79,8 @@ export const Title: React.FC<{
 					alignSelf: 'center',
 					opacity,
 					margin: 0,
+					textAlign: 'center',
+					fontVariant: 'all-small-caps'
 				}}
 			>
                 {buildSegments}

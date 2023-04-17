@@ -17,7 +17,7 @@ export default function measureParagraph(
     let currentLineWidth = 0;
     let currentLineHeight = 0;
 
-    console.log(blankSpaceWidth)
+    //console.log(blankSpaceWidth)
 
     for (let i = 0; i < wordMetrics.length; i++) {
         const word = words[i];

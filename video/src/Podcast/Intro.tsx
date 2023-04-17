@@ -5,6 +5,8 @@ import {
 	AbsoluteFill,
 	Audio,
     staticFile,
+		interpolate,
+    Sequence,
 } from 'remotion';
 import styled from 'styled-components';
 
@@ -42,15 +44,18 @@ export const Intro: React.FC<{
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 
-    console.log(details)
+	
 
-    const text = `Booting up... ${details?.subscribers ? `\nSubscribers: ${details.subscribers}` : ''}\n${date}`
+  //console.log(details)
+
+  const text = `Booting up... ${details?.subscribers ? `\nSubscribers: ${details.subscribers}` : ''}\n${date}`
 
 	const orientation =
 		videoConfig.width > videoConfig.height ? 'landscape' : 'portrait';
 
 	const audioSrc = staticFile(audioFilePath.substring(audioFilePath.lastIndexOf('/') + 1))
 
+	{/*
 	const lampEntry = spring({
 		fps: videoConfig.fps,
 		from: orientation === 'landscape' ? -2000 : 2000,
@@ -116,7 +121,7 @@ export const Intro: React.FC<{
 			mass: 10,
 		},
         durationInFrames: 30
-	});
+	});*/}
 
 	const startTypingAtFrame = 30;
 	const typingDuration = videoConfig.durationInFrames - 90;
@@ -143,7 +148,7 @@ export const Intro: React.FC<{
 				)
 		)
 		.reduce((acc, val) => acc.concat(val), []);
-    console.log(videoConfig.durationInFrames - endOfTypingAnimation, cycleWaitingTypeDuration, waitingTypeCicles)
+    //console.log(videoConfig.durationInFrames - endOfTypingAnimation, cycleWaitingTypeDuration, waitingTypeCicles)
 
     let lineDelay = 0;
     const textElements = text.split('\n').map((sentence, lineIndex, lines) => {
@@ -231,7 +236,8 @@ export const Intro: React.FC<{
 						))}
 					</TitleDiv>
 				) : null}
-				<svg
+				
+				{/*<svg
 					xmlns="http://www.w3.org/2000/svg"
 					xmlnsXlink="http://www.w3.org/1999/xlink"
 					viewBox="0 0 1186.4 662.8"
@@ -244,7 +250,7 @@ export const Intro: React.FC<{
 						<use xlinkHref="#prefix__a" overflow="visible" />
 					</clipPath>
 					{/* Pé da mesa */}
-					<path
+					{/*<path
 						style={{transform: `translateY(${tableEntry}px)`}}
 						clipPath="url(#prefix__b)"
 						fill="#edcf94"
@@ -253,7 +259,7 @@ export const Intro: React.FC<{
 						d="M47.2 626.1h34v56.4h-34zM850.5 626.6h281.4v49.9H850.5z"
 					/>
 					{/* Tampo da mesa */}
-					<path
+					{/*<path
 						style={{transform: `translateY(${tableEntry}px)`}}
 						d="M1172 626.1H18.4c-2.7 0-5-1.1-5-2.5v-14.3c0-1.4 2.2-2.5 5-2.5H1172c2.7 0 5 1.1 5 2.5v14.3c0 1.4-2.2 2.5-5 2.5z"
 						fill="#edcf94"
@@ -261,13 +267,13 @@ export const Intro: React.FC<{
 						strokeMiterlimit={10}
 					/>
 					{/* Sombra da mesa */}
-					<path
+					{/*<path
 						style={{transform: `translateY(${tableEntry}px)`}}
 						fill="#d7b476"
 						d="M851 627.2h280.4v10.5H851zM47.7 626.7h33v6.6h-33z"
 					/>
 					{/* Computador */}
-					<g style={{transform: `translateY(${computerEntry}px)`}}>
+					{/*<g style={{transform: `translateY(${computerEntry}px)`}}>
 						<path
 							fill="#888889"
 							stroke="#050606"
@@ -349,7 +355,7 @@ export const Intro: React.FC<{
 						) : null}
 					</g>
 					{/* Teclado */}
-					<g style={{transform: `translateY(${keyboardEntry}px)`}}>
+					{/*<g style={{transform: `translateY(${keyboardEntry}px)`}}>
 						<path
 							d="M692.9 606.8H363.5V602c0-4 3.2-7.2 7.2-7.2h315c4 0 7.3 3.3 7.3 7.3v4.7z"
 							fill="#e5e9ed"
@@ -369,7 +375,7 @@ export const Intro: React.FC<{
 						/>
 					</g>
 					{/* Lamp */}
-					<g style={{transform: `translateY(${lampEntry}px)`}}>
+					{/*<g style={{transform: `translateY(${lampEntry}px)`}}>
 						<g stroke="#0b0b0b" strokeMiterlimit={10}>
 							<g fill="#228370">
 								<path d="M187.9 333.9l6.9 3.8-123.9 79.4-5.7-5.5 122.7-77.7M198.6 342.1l6.9 4.8-121.4 78.3-5.1-5.5 119.6-77.6" />
@@ -430,7 +436,7 @@ export const Intro: React.FC<{
 						/>
 					</g>
 					{/* Mouse */}
-					<g style={{transform: `translateY(${mouseEntry}px)`}}>
+					{/*<g style={{transform: `translateY(${mouseEntry}px)`}}>
 						<path
 							d="M724.1 606.7s0-8.6 12.9-14.3c8.7-3.9 18.7-4 27.5-.6 6.8 2.6 13.7 7.2 13.7 15l-54.1-.1z"
 							fill="#e5e9ed"
@@ -443,7 +449,7 @@ export const Intro: React.FC<{
 						/>
 					</g>
 					{/* Coffee */}
-					<g style={{transform: `translateY(${coffeeEntry}px)`}}>
+					{/*<g style={{transform: `translateY(${coffeeEntry}px)`}}>
 						<path
 							fill="#f9efe5"
 							stroke="#0d0d0d"
@@ -489,7 +495,7 @@ export const Intro: React.FC<{
 						/>
 						<path fill="#9b3021" d="M850.9 515.7l.3-2h68.4l.4 2z" />
 					</g>
-				</svg>
+					</svg>*/}
 			</AbsoluteFill>
 		</>
 	);

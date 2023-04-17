@@ -14,7 +14,7 @@ type VideoWrapperProps = {
 };
 
 const VideoWrapper = styled.div<VideoWrapperProps>`
-	background: #0c2d48;
+	//background: #0c2d48;
 	display: flex;
 	flex-direction: column;
 	width: ${(props) => props.videoWidth}px;
@@ -32,9 +32,9 @@ export const Wrapper: React.FC<WrapperProps> = ({children, title, show}) => {
 		durationInFrames,
 	} = useVideoConfig();
 
-	if (destination === 'youtube' && show) {
+	{/*if (destination === 'youtube' && show) {
 		return <YoutubeWrapper title={title}>{children}</YoutubeWrapper>;
-	}
+	}*/}
 
 	return (
 		<VideoWrapper videoHeight={videoHeight} videoWidth={videoWidth}>
