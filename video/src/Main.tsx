@@ -81,7 +81,7 @@ export const Main: React.FC<{
 
     return (
         <div style={{flex: 1,}} >
-            <Sequence from={initialFrame-15}><Audio src={meditation}  loop={true} volume={0.5}/></Sequence>
+            <Sequence from={initialFrame-15}><Audio src={meditation}  loop={true} volume={0.3}/></Sequence>
             <Sequence from={initialFrame/2}><Video src={background}  loop={true}/></Sequence>
             
             <div style={{ opacity }}>

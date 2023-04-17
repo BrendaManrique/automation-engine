@@ -1,5 +1,7 @@
 //Supported voices
 //https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=stt#prebuilt-neural-voices
+/*Configure voice style:  
+https://speech.microsoft.com/audiocontentcreation */
 import {
     SpeechSynthesisOutputFormat,
     SpeechConfig,
@@ -197,13 +199,18 @@ class TextToSpeechService {
             const audioConfig = AudioConfig.fromAudioFileOutput(audioFilePath);
 
             const ssml = `
-                <speak version="1.0" xml:lang="en-US">
+                <speak version="1.0" xml:lang="en-US" xmlns:mstts="http://www.w3.org/2001/mstts">
                     <voice name="${this.getSingleVoice()}">
-                        <mstts:express-as style="whispering" styledegree="2">
-                            <break time="250ms" /> ${text}
+                        <mstts:express-as style="whispering">
+                            <prosody rate="-12.00%">
+                                <break time="250ms" /> ${text}
+                            </prosody>
                         </mstts:express-as>
                     </voice>
                 </speak>`;
+            //<mstts:express-as style="whispering">
+            //</mstts:express-as>
+            //<speak xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="http://www.w3.org/2001/mstts" xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US"><voice name="en-US-JasonNeural"><s /><mstts:express-as style="whispering">This is a new text"</mstts:express-as></voice><voice name="en-US-AriaNeural"><mstts:express-as style="whispering">That’s remarkable! You’re a genius!"Mom said to her son.</mstts:express-as><s />
 
             const synthesizer = new SpeechSynthesizer(
                 speechConfig,
