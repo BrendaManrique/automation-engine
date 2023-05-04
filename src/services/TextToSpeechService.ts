@@ -10,29 +10,31 @@ import {
     SpeechSynthesisBoundaryType,
 } from 'microsoft-cognitiveservices-speech-sdk';
 import path from 'path';
+import fs from 'fs';
 
 import { error, log } from '../utils/log';
 import { getPath } from '../config/defaultPaths';
 import InterfaceJsonContent from '../models/InterfaceJsonContent';
 import Segment from '../models/Segments';
+//import  propsPreview from './props.json';
 
 class TextToSpeechService {
     private voices = [
-        { chance: 3, name: 'en-US-AmberNeural' },
-        { chance: 3, name: 'en-US-AnaNeural' },
+        //{ chance: 3, name: 'en-US-AmberNeural' },
+        //{ chance: 3, name: 'en-US-AnaNeural' },
         { chance: 1, name: 'en-US-AriaNeural' },
-        { chance: 1, name: 'en-US-BrandonNeural' },
-        { chance: 1, name: 'en-US-ChristopherNeural' },
-        { chance: 1, name: 'en-US-CoraNeural' },
-        { chance: 3, name: 'en-US-DavisNeural' },
-        { chance: 3, name: 'en-US-ElizabethNeural' },
-        { chance: 1, name: 'en-US-GuyNeural' },
-        { chance: 3, name: 'en-US-JacobNeural' },
-        { chance: 0, name: 'en-US-JasonNeural' },
-        { chance: 0, name: 'en-US-MichelleNeural' },
-        { chance: 1, name: 'en-US-MonicaNeural' },
-        { chance: 1, name: 'en-US-SaraNeural' },
-        { chance: 1, name: 'en-US-TonyNeural' },
+        //{ chance: 1, name: 'en-US-BrandonNeural' },
+        //{ chance: 1, name: 'en-US-ChristopherNeural' },
+        //{ chance: 1, name: 'en-US-CoraNeural' },
+        //{ chance: 3, name: 'en-US-DavisNeural' },
+        //{ chance: 3, name: 'en-US-ElizabethNeural' },
+        //{ chance: 1, name: 'en-US-GuyNeural' },
+        //{ chance: 3, name: 'en-US-JacobNeural' },
+        { chance: 3, name: 'en-US-JasonNeural' },
+        { chance: 0, name: 'en-US-JennyNeural' },
+        { chance: 0, name: 'en-US-NancyNeural' },
+        //{ chance: 1, name: 'en-US-SaraNeural' },
+        //{ chance: 1, name: 'en-US-TonyNeural' }, //Nancy, Aria, Davis, Jenny
     ];
     private azureKey: string;
     private azureRegion: string;
@@ -148,6 +150,16 @@ class TextToSpeechService {
             'end',
         );
 
+
+        //propsPreview.content = this.content;
+        const rawData = fs.readFileSync('./props.json');
+        const data = JSON.parse(rawData.toString());
+        // Modify the value
+        data.content = this.content;
+        // Write the modified data back to the file
+        fs.writeFileSync('./props.json', JSON.stringify(data));
+
+
         this.content.renderData.push({
             text: this.content.end.text,
             duration,
@@ -165,7 +177,7 @@ class TextToSpeechService {
         if (!this.voice) {
             this.voice =
                 voicesExtended[Math.floor(Math.random() * voicesExtended.length)];
-        } else {
+        } /*else {
             let newVoice = voicesExtended[Math.floor(Math.random() * voicesExtended.length)];
 
             while (newVoice === this.voice) {
@@ -173,7 +185,7 @@ class TextToSpeechService {
             }
 
             this.voice = newVoice;
-        }
+        }*/
 
         return this.voice;
     }
@@ -198,12 +210,13 @@ class TextToSpeechService {
                 SpeechSynthesisOutputFormat.Audio48Khz192KBitRateMonoMp3;
             const audioConfig = AudioConfig.fromAudioFileOutput(audioFilePath);
 
+
             const ssml = `
                 <speak version="1.0" xml:lang="en-US" xmlns:mstts="http://www.w3.org/2001/mstts">
-                    <voice name="${this.getSingleVoice()}">
+                    <voice name="${this.getVoice()}">
                         <mstts:express-as style="whispering">
-                            <prosody rate="-12.00%">
-                                <break time="250ms" /> ${text}
+                            <prosody rate="-22.00%">
+                                ${text}
                             </prosody>
                         </mstts:express-as>
                     </voice>

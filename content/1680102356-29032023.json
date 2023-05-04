@@ -6,16 +6,16 @@
     "height": 0,
     "date": "29/03/2023",
     "intro": {
-        "text": "Welcome to Daily Calm."
+        "text": "Welcome to Daily Story."
     },
     "end": {
         "text": "As we approach the end of the session, bring your attention back to the room. Wiggle your fingers and toes and slowly open your eyes. I hope you enjoyed today's daily meditation. Bring this state of peace with you into the day and we'll see you back here tomorrow.",
         "url": "https://bit.ly/newsletter"
     },
     "news": [
-        {
-            "text": "As we welcome a new day, let's shift our focus to the present moment. Find a comfortable position, with your back tall and straight, and let your arms rest gently. When you're ready, softly close your eyes and allow your mind to settle. Bring your full attention to this moment and release any distractions or concerns from your mind. Let us take this moment to breathe deeply and find a sense of peace within ourselves.",
-            "url": "https://google.com"
-        }
+            {
+              "text": "Welcome to your meditation practice.",
+              "url": ""
+            }
     ]
 }

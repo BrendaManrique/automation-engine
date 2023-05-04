@@ -81,7 +81,7 @@ export const Main: React.FC<{
 
     return (
         <div style={{flex: 1,}} >
-            <Sequence from={initialFrame-15}><Audio src={meditation}  loop={true} volume={0.3}/></Sequence>
+            <Sequence from={0}><Audio src={meditation}  loop={true} volume={0.2}/></Sequence>
             <Sequence from={initialFrame/2}><Video src={background}  loop={true}/></Sequence>
             
             <div style={{ opacity }}>
@@ -167,7 +167,7 @@ export const Main: React.FC<{
                                     />
                                     <Logo />
                                 </Sequence>
-                                {index < renderData.length - 1 ? (
+                                {/*index < renderData.length - 1 ? (
                                     <Sequence
                                         key={`${initialFrame}-Transition`}
                                         from={initialFrame + textDuration}
@@ -177,7 +177,7 @@ export const Main: React.FC<{
                                     >
                                         <Transition />
                                     </Sequence>
-                                ) : null}
+                                    ) : null*/}
                             </>
                         );
                     }
@@ -200,7 +200,7 @@ export const Main: React.FC<{
                                     />
                                 </Wrapper>
                             </Sequence>
-                            {index < renderData.length - 1 ? (
+                            {/*index < renderData.length - 1 ? (
                                 <Sequence
                                     key={`${initialFrame}-Transition`}
                                     from={initialFrame + textDuration}
@@ -210,7 +210,7 @@ export const Main: React.FC<{
                                 >
                                     <Transition />
                                 </Sequence>
-                            ) : null}
+                                ) : null*/}
                         </>
                     );
                 })}
